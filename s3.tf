@@ -1,9 +1,9 @@
-resource "aws_s3_bucket" "swiggy_bucket" {
+resource "aws_s3_bucket" "example_bucket" {
   bucket = "swiggy-buckefuvghvhgc11"
 }
 
-resource "aws_s3_bucket_versioning" "swiggy_versioning" {
-  bucket = aws_s3_bucket.swiggy_bucket.id
+resource "aws_s3_bucket_versioning" "example_versioning" {
+  bucket = aws_s3_bucket.example_bucket.id
   versioning_configuration {
     status = "Enabled"
   }
