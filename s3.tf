@@ -1,9 +1,10 @@
-# Create an S3 Bucket
-resource "aws_s3_bucket" "example_bucket" {
+resource "aws_s3_bucket" "swiggy_bucket" {
   bucket = "swiggy-buckefuvghvhgc11"
+}
 
-  # Enable versioning
-  versioning {
-    enabled = true
+resource "aws_s3_bucket_versioning" "swiggy_versioning" {
+  bucket = aws_s3_bucket.swiggy_bucket.id
+  versioning_configuration {
+    status = "Enabled"
   }
 }
